@@ -1,10 +1,12 @@
-  html,body{
-  margin:0px;
-  padding: 0px;
+/* Reset de estilos padrão */
+html, body {
+  margin: 0;
+  padding: 0;
 }
-/* INDEX */
-body{
-  background: linear-gradient(10deg,#000000,#6e7d88);
+
+/* Estilos para o corpo da página INDEX */
+body {
+  background: linear-gradient(10deg, #000000, #6e7d88);
   font-family: 'Montserrat', sans-serif;
   color: aliceblue;
   text-align: center;
@@ -12,46 +14,43 @@ body{
   min-height: 100vh;
 }
 
-.navigation{
-  background-color: #37718e ;
-  height: 50px ;
-  background: linear-gradient(135deg,#05b8cf,#530d96);
+/* Estilos para a barra de navegação */
+.navigation {
+  background-color: #37718e;
+  height: 50px;
+  background: linear-gradient(135deg, #05b8cf, #530d96);
   animation-duration: 1.5s;
   animation-name: nav;
 }
 
-.navigation ul{
-  margin-top: 0px;
-  list-style: none; /* tirar as bolinhas do 'ul' */
-  padding-left: 0px;
-  text-align: center; 
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
   height: 50px;
   display: flex;
-  list-style-type: none;
   justify-content: center;
-  padding: 0;
 }
 
-.navigation a{
+.navigation a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.navigation a:hover{
-  color:#000000
+.navigation a:hover {
+  color: #000000;
 }
 
-.navigation li{
-  display: inline-block; /* criar os blocos */
-  padding-left: 30px;
-  padding-right: 30px;
+.navigation li {
+  display: inline-block;
+  padding: 0 30px;
   height: 50px;
   line-height: 50px;
   font-size: 16px;
-  
 }
 
-.navigation li.threeline-icon{
+.navigation li.threeline-icon {
   display: none;
 }
 
@@ -60,152 +59,153 @@ body{
   cursor: pointer;
 }
 
-.capa div{
-  display: inline-block; /* criar blocos */
-  height: 500px;
+/* Estilos para a seção da capa */
+.capa div {
+  display: inline-block;
 }
 
-.profile-pic{
-/* background-color: yellow; */
- /* Opção para caso use cores diferentes para cada bloco e transformar o site responsivo a sempre trabalhar com essa proporção*/
-box-sizing: border-box;
-animation-name: profile-capa;
-animation-duration: 1.5s;
-vertical-align: center;
-margin-right: 25px;
+.profile-pic {
+  box-sizing: border-box;
+  animation-name: profile-capa;
+  animation-duration: 1.5s;
+  margin-right: 25px;
 }
 
-.profile-pic img{
+.profile-pic img {
   width: 350px;
   border-radius: 90px;
   margin-top: 80px;
-  animation-name: profile-capa;
-  animation-duration: 1.5s;
-  align-items: center;
 }
 
- .profile-title{
-  /* background-color: red; */
-  vertical-align: top; /* Opção para caso use cores diferentes para cada bloco e transformar o site responsivo a sempre trabalhar com essa proporção*/
+.profile-title {
+  vertical-align: top;
   animation-name: title-capa;
   animation-duration: 1.5s;
-} 
-
-.profile-title h1{ /* Titulo de Nome e Exercicio do Professor*/
-line-height: 30px; /* diminuir espacamento */
-font-size: 50px;
-text-shadow: cyan -2px 0, red 2px 0;
-margin-top: 180px;
-color:#ffffff
-text-align: center;
 }
 
+.profile-title h1 {
+  line-height: 30px;
+  font-size: 50px;
+  text-shadow: cyan -2px 0, red 2px 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.profile-title h2 {
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+/* Estilos para as imagens sociais */
 #social-img {
   width: 50px;
-  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Animações */
 @keyframes profile-capa {
-  0%  {opacity: 0; transform: translate(0px,20px)}
-  100% {opacity: 1; transform: translate(0px,0px)}
+  0% {
+    opacity: 0;
+    transform: translate(0px, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
 }
 
 @keyframes title-capa {
-  0%  {opacity: 0; transform: translate(0px,-20px)}
-  100% {opacity: 1; transform: translate(0px,0px)}
+  0% {
+    opacity: 0;
+    transform: translate(0px, -20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
 }
 
 @keyframes nav {
-  0%  {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@keyframes tela{
-  0%  {opacity: 0;}
-  100% {opacity: 1;}
-}
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+  .navigation li {
+    display: none;
+  }
 
-@media (max-width:1200px){
+  .navigation li.threeline-icon {
+    display: inline-block;
+    text-align: right;
+  }
 
-.navigation li{
-  display: none;
-}
+  .capa div {
+    display: block;
+  }
 
-.navigation li.threeline-icon{
-  display: inline-block;  
-  text-align: right;
-}
+  .profile-pic {
+    width: 100%;
+  }
 
-.capa div{
-  display: block; /* criar blocos */
-  height: auto;
-}
+  .profile-pic img {
+    margin-top: 0;
+    max-width: 80%;
+  }
 
-.profile-pic{
-width: 100%;
-}
+  .profile-title {
+    width: 100%;
+    text-align: center;
+  }
 
-.profile-pic img{
-  margin-top: 0;
-  max-width: 80%;
-}
+  .profile-title h1 {
+    font-size: 40px;
+  }
 
-.profile-title{
-width: 100%;
-text-align: center;
-}
+  .main {
+    padding: 5px 5% 40px 5%;
+  }
 
-.profile-title h1{
-margin-top: 20px;
-font-size: 40px;
-}
+  .main a {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
 
-.main {
-  padding-top: 5px;
-  padding-right: 5%;
-  padding-bottom: 40px;
-  padding-left: 5%;
-}
+  .miniatura {
+    max-width: 100%;
+    background-size: auto 100%;
+  }
 
-.main a{
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
+  .blackbox {
+    opacity: 0.5%;
+  }
 
-.miniatura{
-max-width: 100%;
-background-size: auto 100%;
+  .menujs,
+  .menujs ul {
+    height: auto;
+    text-align: center;
+  }
 
-}
+  .menujs li {
+    display: block;
+  }
 
-.blackbox{
-  opacity: 0.5%;
-}
+  #page-container {}
 
-.menujs{
-height: auto;
-}
+  #content-wrap {
+    padding-bottom: 2.5rem;
+  }
 
-.menujs ul{
-height: auto;
-text-align: center;
-}
-
-.menujs li{
-  display:block;
-}
-
-#page-container {
-
-}
-
-#content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
-}
-
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;            /* Footer height */
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 }
