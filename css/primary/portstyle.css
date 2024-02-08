@@ -16,14 +16,18 @@ body{
   background-color: #37718e ;
   height: 50px ;
   background: linear-gradient(135deg,#530d96,#05b8cf);
+  animation-name: nav;
+  animation-duration: 1.5s;
 }
 
 .navigation ul{
-  margin-top: 0px;
- list-style: none; /* tirar as bolinhas do 'ul' */
- text-align: center; 
- list-style-type: none;
- justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .navigation a{
@@ -35,10 +39,9 @@ body{
   color:#000000
 }
 
-.navigation li{
-  display: inline-block; /* criar os blocos */
-  padding-left: 30px;
-  padding-right: 30px;
+.navigation li {
+  display: inline-block;
+  padding: 0 30px;
   height: 50px;
   line-height: 50px;
   font-size: 16px;
@@ -49,9 +52,10 @@ body{
 }
 
 .navigation li.threeline-icon:hover {
-   color: #f27609;
-   cursor: pointer;
+  color: #f27609;
+  cursor: pointer;
 }
+
 
 .main {
   animation-name: tela;
@@ -110,12 +114,34 @@ opacity: 0;
   text-transform: uppercase; /*letras maiusculas*/
   margin-top: 0;
 }
-@media (max-width:800px){
-navigation li{
-display: none;
+
+
+@media (max-width: 1200px) {
+  .navigation li {
+    display: none;
+  }
+
+  .navigation li.threeline-icon {
+    display: inline-block;
+    text-align: right;
+  }
+
+
+@keyframes nav {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.navigation li.threeline-icon{
-  display: inline-block;  
-  text-align: right;
+.menujs,
+.menujs ul {
+  height: auto;
+  text-align: center;
 }
+
+.menujs li {
+  display: block;
+}}
