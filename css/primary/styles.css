@@ -68,34 +68,35 @@ body {
   box-sizing: border-box;
   animation-name: profile-capa;
   animation-duration: 1.5s;
-  margin-right: 25px;
 }
 
 .profile-pic img {
   width: 350px;
   border-radius: 90px;
-  margin-top: 80px;
+  margin-top: 5%;
 }
 
 .profile-title {
-  vertical-align: top;
   animation-name: title-capa;
   animation-duration: 1.5s;
 }
 
 .profile-title h1 {
-  line-height: 30px;
   font-size: 50px;
   text-shadow: cyan -2px 0, red 2px 0;
   color: #ffffff;
   text-align: center;
 }
 
-.profile-title h2 {
+.profile-title h3 {
+  font-size: 25px; 
+  color: #ffffff;
   text-align: center;
-  margin-left: 20%;
-  margin-right: 20%;
+  padding-left: 17%;
+  padding-right: 17%;
 }
+
+
 
 /* Estilos para as imagens sociais */
 #social-img {
