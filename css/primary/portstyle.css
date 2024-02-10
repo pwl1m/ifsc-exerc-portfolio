@@ -67,8 +67,8 @@ body{
   /* onde ta escrito portifolio */
 .main h1{ 
   color: #ffffff;
-   font-weight: normal;
-   text-align: center;
+  font-weight: normal;
+  text-align: center;
 }
   /* lettra de dentro das fotos */
 .main h2{
@@ -85,7 +85,7 @@ height: 300px;
 display: inline-block;
 margin-right: 30px;
 margin-bottom: 15px;
-background-size: 100%; /*pra fazer a imagem caber no tamanho do CSS*/
+background-size: 100%; 
 overflow: hidden;
 }
 
