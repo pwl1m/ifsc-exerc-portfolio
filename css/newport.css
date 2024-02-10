@@ -47,7 +47,7 @@ img{
     max-width: 100%;
 }
 
-.row{
+.lateral{
     display:flex;
 
 }
@@ -81,7 +81,7 @@ footer{
 }
 /* para telas pequenas */
 @media screen and (max-width:650px) {
-    .row{
+    .lateral{
         flex-direction: column-reverse;
     }
     nav{
